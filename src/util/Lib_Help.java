@@ -1,3 +1,5 @@
+package util;
+
 public class Lib_Help {
     public static double[][] multiplyMatrices(double[][] firstMatrix, double[][] secondMatrix) {
         double[][] result = new double[firstMatrix.length][secondMatrix[0].length];

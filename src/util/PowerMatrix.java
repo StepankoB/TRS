@@ -1,3 +1,5 @@
+package util;
+
 public class PowerMatrix implements Runnable {
     double[][] m;
     double[][] result;

@@ -1,3 +1,5 @@
+package util;
+
 public class MatricesActions implements Runnable {
     double[][] m1;
     double[][] m2;

@@ -1,3 +1,5 @@
+package util;
+
 import java.util.concurrent.ThreadLocalRandom;
 class VectorGen implements Runnable {
     double[][] vc;
