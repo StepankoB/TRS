@@ -1,4 +1,5 @@
 package util;
+import util.MatrixSolver.*;
 
 public class Lib_Help {
     public static double[][] multiplyMatrices(double[][] firstMatrix, double[][] secondMatrix) {

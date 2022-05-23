@@ -1,4 +1,5 @@
 package util;
+import util.MatrixSolver.*;
 
 public class PowerMatrix implements Runnable {
     double[][] m;

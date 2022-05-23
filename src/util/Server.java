@@ -3,7 +3,7 @@ package util;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import util.MatrixSolver;
+import util.MatrixSolver.*;
 
 public class Server {
 

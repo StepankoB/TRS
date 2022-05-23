@@ -1,4 +1,5 @@
 package util;
+import util.MatrixSolver.*;
 
 import java.util.concurrent.ThreadLocalRandom;
 class VectorGen implements Runnable {
