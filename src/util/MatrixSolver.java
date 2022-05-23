@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import util.VectorGen;
+import util.MatrixSolverImpl;
 
 public interface MatrixSolver extends Remote {
     public double[][] solveForN(int n) throws RemoteException;
