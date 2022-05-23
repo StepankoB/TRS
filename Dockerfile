@@ -1,9 +1,9 @@
-FROM openjdk
+FROM openjdk:latest
 
-RUN mkdir /app
-WORKDIR /app
-COPY /src /app
+COPY /src/util /var/www/java
+WORKDIR /var/www/java
+
 EXPOSE 8080
 
-RUN javac util.Server.java
-CMD ["java", "util.Server"]
+RUN javac Server.java
+CMD ["java", "Server"]
