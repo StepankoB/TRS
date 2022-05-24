@@ -1,9 +1,9 @@
 FROM openjdk:latest
 
-COPY /src/util /var/www/java
-WORKDIR /var/www/java
+COPY src /src
+#WORKDIR /src
 
 EXPOSE 8080
 
-RUN javac Server.java
-CMD ["java", "Server"]
+RUN javac src/util/Server.java
+CMD java -classpath src util.Server
