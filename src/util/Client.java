@@ -13,7 +13,7 @@ public class Client {
         }
         Registry registry = null;
         try {
-            registry = LocateRegistry.getRegistry(1011);
+            registry = LocateRegistry.getRegistry(8080);
             MatrixSolver stub = (MatrixSolver) registry.lookup("MatrixEquationSolver");
 
                 int n;

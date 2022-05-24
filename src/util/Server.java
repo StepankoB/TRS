@@ -26,7 +26,7 @@ public class Server extends MatrixSolverImpl{
 
         try {
             MatrixSolver stub = (MatrixSolver) UnicastRemoteObject.exportObject(solver, 0);//прокидання портів
-            Registry registry = LocateRegistry.createRegistry(1011);
+            Registry registry = LocateRegistry.createRegistry(8080);
             registry.bind("MatrixEquationSolver", stub);
         } catch (Throwable e){
             System.out.println(e.getMessage());
