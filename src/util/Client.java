@@ -1,11 +1,18 @@
 package util;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
+
 import util.MatrixSolver.*;
 
-public class Client {
+public class Client extends MatrixSolverImpl{
 
     public static void main(String[] args) {
         if (System.getSecurityManager() == null) {
@@ -13,7 +20,7 @@ public class Client {
         }
         Registry registry = null;
         try {
-            registry = LocateRegistry.getRegistry(8080);
+            registry = LocateRegistry.getRegistry(8090);
             MatrixSolver stub = (MatrixSolver) registry.lookup("MatrixEquationSolver");
 
                 int n;
@@ -30,3 +37,5 @@ public class Client {
         }
     }
 }
+
+

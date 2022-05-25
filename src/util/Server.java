@@ -17,16 +17,16 @@ public class Server extends MatrixSolverImpl{
 
 
     public static void main(String[] args) {
-//        if (System.getSecurityManager() == null) {
-//            System.setSecurityManager( new SecurityManager());
-//
-//        }
+        if (System.getSecurityManager() == null) {
+            System.setSecurityManager( new SecurityManager());
+
+        }
         System.setProperty("java.rmi.server.hostname", "127.0.0.1");
         MatrixSolver solver = new MatrixSolverImpl();
 
         try {
             MatrixSolver stub = (MatrixSolver) UnicastRemoteObject.exportObject(solver, 0);//прокидання портів
-            Registry registry = LocateRegistry.createRegistry(8080);
+            Registry registry = LocateRegistry.createRegistry(8090);
             registry.bind("MatrixEquationSolver", stub);
         } catch (Throwable e){
             System.out.println(e.getMessage());
